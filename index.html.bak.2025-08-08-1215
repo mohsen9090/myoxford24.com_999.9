@@ -1,0 +1,837 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta 
+charset="UTF-8"> <meta name="viewport" 
+content="width=device-width,initial-scale=1"> 
+<title>MyOxford24 -- Learn English with TED & 
+AI</title> <link rel="preconnect" 
+href="https://fonts.googleapis.com"> <link 
+rel="preconnect" href="https://fonts.gstatic.com" 
+crossorigin> <link 
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" 
+rel="stylesheet"> <style>
+  :root{
+    --bg: linear-gradient(135deg, #0f0f23 0%, 
+    #1a1a2e 50%, #16213e 100%);
+    --card: rgba(255,255,255,.08); --card-hover: 
+    rgba(255,255,255,.12); --teal: #00d9ff; 
+    --teal-light: #4df0ff; --teal-dark: #00b8e6; 
+    --purple: #6366f1; --purple-light: #818cf8; 
+    --ink: #ffffff; --muted: #cbd5e1; --accent: 
+    #8b5cf6;
+    --success: #10b981; --warning: #f59e0b; 
+    --gradient-primary: linear-gradient(135deg, 
+    var(--teal) 0%, var(--purple) 100%); 
+    --gradient-card: linear-gradient(145deg, 
+    rgba(255,255,255,.05) 0%, 
+    rgba(255,255,255,.02) 100%); --shadow: 0 8px 
+    32px rgba(0,0,0,.3); --shadow-hover: 0 12px 
+    48px rgba(0,0,0,.4);
+  }
+  
+  * { box-sizing: border-box; transition: all 
+    0.3s ease;
+  }
+  
+  body { /* Anti-Popup Shield */ *[id*="trust"], 
+  *[class*="trust"], *[id*="privacy"], 
+  *[class*="privacy"], div[style*="position: 
+  absolute"], div[style*="position: fixed"], 
+  iframe + div, .ot-sdk-container { display: none 
+  !important; visibility: hidden !important; }
+    margin: 0; background: var(--bg); 
+    background-attachment: fixed; color: 
+    var(--ink); font-family: 'Inter', 
+    -apple-system, BlinkMacSystemFont, system-ui, 
+    sans-serif; line-height: 1.7; font-weight: 
+    400;
+  }
+  /* Hide privacy popups and overlays */ 
+  .onetrust-pc-dark-filter, 
+  .onetrust-pc-container,
+  #onetrust-consent-sdk,
+  .ot-sdk-container, [id*="onetrust"], 
+  [class*="onetrust"], [id*="privacy"], 
+  [class*="privacy"], .cookie-banner, 
+  .consent-banner, .gdpr-banner {
+    display: none !important; visibility: hidden 
+    !important;
+    opacity: 0 !important; pointer-events: none 
+    !important;
+    z-index: -1 !important;
+  }
+  /* Hide any white overlays */ iframe + 
+  div[style*="position: absolute"], iframe + 
+  div[style*="position: fixed"], 
+  div[style*="background: white"], 
+  div[style*="background: #fff"], 
+  div[style*="background-color: white"], 
+  div[style*="background-color: #fff"] {
+    display: none !important;
+  }
+  
+  header { padding: 40px 20px; text-align: 
+    center; background: rgba(0,0,0,.2); 
+    backdrop-filter: blur(20px); border-bottom: 
+    1px solid rgba(255,255,255,.1); position: 
+    sticky; top: 0; z-index: 100;
+  }
+  
+  h1 { font-family: 'Poppins', sans-serif; 
+    font-size: 3rem; font-weight: 700; margin: 0; 
+    background: var(--gradient-primary); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; text-shadow: 0 0 30px 
+    rgba(0,217,255,.3);
+  }
+  
+  h1 span { color: var(--teal-light);
+  }
+  
+  header p { font-size: 1.2rem; color: 
+    var(--muted); margin: 15px 0 0; font-weight: 
+    300;
+  }
+  
+  .container { max-width: 1200px; margin: auto; 
+    padding: 40px 20px;
+  }
+  
+  .section-title { font-family: 'Poppins', 
+    sans-serif; font-size: 2rem; font-weight: 
+    600; margin: 50px 0 30px; background: 
+    var(--gradient-primary); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; border-bottom: 3px 
+    solid; border-image: var(--gradient-primary) 
+    1; padding-bottom: 10px; position: relative;
+  }
+  
+  .section-title::after { content: ''; position: 
+    absolute; bottom: -3px; left: 0; width: 60px; 
+    height: 3px; background: 
+    var(--gradient-primary); border-radius: 2px;
+  }
+  
+  .video-grid { display: grid; 
+    grid-template-columns: repeat(auto-fit, 
+    minmax(400px, 1fr)); gap: 30px; 
+    margin-bottom: 40px;
+  }
+  
+  .video-card { background: var(--gradient-card); 
+    backdrop-filter: blur(20px); border: 1px 
+    solid rgba(255,255,255,.1); padding: 25px; 
+    border-radius: 20px; box-shadow: 
+    var(--shadow); transition: all 0.4s 
+    cubic-bezier(0.4, 0, 0.2, 1); position: 
+    relative; overflow: hidden;
+  }
+  
+  .video-card::before { content: ''; position: 
+    absolute; top: 0; left: 0; right: 0; height: 
+    4px; background: var(--gradient-primary); 
+    transform: scaleX(0); transition: transform 
+    0.3s ease;
+  }
+  
+  .video-card:hover::before { transform: 
+    scaleX(1);
+  }
+  
+  .video-card:hover { transform: 
+    translateY(-8px); box-shadow: 
+    var(--shadow-hover); background: 
+    var(--card-hover); border-color: 
+    rgba(0,217,255,.3);
+  }
+  
+  .iframe-container { position: relative; width: 
+    100%; height: 280px; border-radius: 15px; 
+    overflow: hidden; background: rgba(0,0,0,.3);
+  }
+  
+  iframe { width: 100%; height: 100%; border: 
+    none; border-radius: 15px; box-shadow: 0 4px 
+    20px rgba(0,0,0,.3); position: relative; 
+    z-index: 1;
+  }
+  
+  .video-card h2 { font-family: 'Poppins', 
+    sans-serif; color: var(--ink); margin: 0 0 
+    15px; font-size: 1.4rem; font-weight: 600; 
+    line-height: 1.4;
+  }
+  
+  .desc { color: var(--muted); font-size: 
+    0.95rem; margin: 15px 0; font-weight: 300;
+  }
+  
+  .lesson-box { background: rgba(99,102,241,.1); 
+    border: 1px solid rgba(99,102,241,.3); 
+    border-left: 4px solid var(--purple); 
+    padding: 20px; border-radius: 12px; 
+    margin-top: 20px; backdrop-filter: 
+    blur(10px);
+  }
+  
+  .lesson-box b { color: var(--purple-light); 
+    font-weight: 600;
+  }
+  
+  .pack { margin-top: 20px; background: 
+    rgba(0,0,0,.4); border: 1px solid 
+    rgba(255,255,255,.1); border-radius: 15px; 
+    overflow: hidden; backdrop-filter: 
+    blur(15px);
+  }
+  
+  .pack summary { cursor: pointer; user-select: 
+    none; padding: 18px 20px; font-weight: 600; 
+    font-family: 'Poppins', sans-serif; 
+    background: rgba(0,217,255,.05); 
+    border-bottom: 1px solid 
+    rgba(255,255,255,.05); transition: all 0.3s 
+    ease;
+  }
+  
+  .pack summary:hover { background: 
+    rgba(0,217,255,.1); color: var(--teal-light);
+  }
+  
+  .pack[open] summary { background: 
+    rgba(0,217,255,.15); color: 
+    var(--teal-light);
+  }
+  
+  .badge { display: inline-block; font-size: 
+    11px; padding: 4px 12px; border-radius: 20px; 
+    background: var(--gradient-primary); color: 
+    white; font-weight: 600; margin-left: 10px; 
+    text-transform: uppercase; letter-spacing: 
+    0.5px;
+  }
+  
+  .pack-inner { padding: 0 20px 20px;
+  }
+  
+  .line { background: rgba(255,255,255,.03); 
+    border-left: 3px solid var(--teal); padding: 
+    15px; border-radius: 10px; margin: 12px 0; 
+    transition: all 0.3s ease;
+  }
+  
+  .line:hover { background: 
+    rgba(255,255,255,.06); transform: 
+    translateX(5px);
+  }
+  
+  .en { font-weight: 500; color: var(--ink); 
+    margin-bottom: 5px;
+  }
+  
+  .fa { color: var(--muted); font-size: 0.9rem; 
+    font-weight: 300;
+  }
+  
+  .mini { border-top: 1px dashed 
+    rgba(255,255,255,.2); margin-top: 20px; 
+    padding-top: 20px;
+  }
+  
+  .mini b { color: var(--teal-light); 
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .stats-grid { display: grid; 
+    grid-template-columns: repeat(auto-fit, 
+    minmax(250px, 1fr)); gap: 20px; margin: 40px 
+    0;
+  }
+  
+  .stat-card { background: var(--gradient-card); 
+    padding: 25px; border-radius: 15px; 
+    text-align: center; border: 1px solid 
+    rgba(255,255,255,.1); backdrop-filter: 
+    blur(10px);
+  }
+  
+  .stat-number { font-size: 2.5rem; font-weight: 
+    700; background: var(--gradient-primary); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; font-family: 
+    'Poppins', sans-serif;
+  }
+  
+  .stat-label { color: var(--muted); font-size: 
+    0.9rem; margin-top: 5px;
+  }
+  .topics-grid { display: grid; 
+    grid-template-columns: repeat(auto-fit, 
+    minmax(200px, 1fr)); gap: 15px; margin: 30px 
+    0;
+  }
+  .topic-tag { background: rgba(139,92,246,.15); 
+    border: 1px solid rgba(139,92,246,.3); 
+    padding: 12px 20px; border-radius: 25px; 
+    text-align: center; font-weight: 500; 
+    transition: all 0.3s ease; cursor: pointer;
+  }
+  .topic-tag:hover { background: 
+    rgba(139,92,246,.25); transform: 
+    translateY(-2px); box-shadow: 0 5px 15px 
+    rgba(139,92,246,.2);
+  }
+  
+  @media (max-width: 768px) { h1 { font-size: 
+    2.2rem; } .video-grid { 
+    grid-template-columns: 1fr; gap: 20px; } 
+    .container { padding: 20px 15px; } 
+    .section-title { font-size: 1.6rem; } 
+    .iframe-container { height: 220px; } 
+    .topics-grid { grid-template-columns: 
+    repeat(auto-fit, minmax(150px, 1fr)); }
+  }
+</style> </head> <body> <header> 
+  <h1>My<span>Oxford24</span></h1> <p>Master 
+  English with Real TED Talks • Advanced AI 
+  Learning • Professional Development</p>
+</header> <div class="container"> <!-- Stats 
+  Section --> <div class="stats-grid">
+    <div class="stat-card"> <div 
+      class="stat-number">25+</div> <div 
+      class="stat-label">TED Talks 
+      Available</div>
+    </div> <div class="stat-card"> <div 
+      class="stat-number">500+</div> <div 
+      class="stat-label">Vocabulary Words</div>
+    </div> <div class="stat-card"> <div 
+      class="stat-number">15+</div> <div 
+      class="stat-label">Topic Categories</div>
+    </div> <div class="stat-card"> <div 
+      class="stat-number">B1-C1</div> <div 
+      class="stat-label">Proficiency Levels</div>
+    </div> </div> <!-- Topics Overview --> <h2 
+  class="section-title">📚 Learning 
+  Categories</h2> <div class="topics-grid">
+    <div class="topic-tag">🏙️ Urban 
+    Development</div> <div class="topic-tag">💪 
+    Health & Lifestyle</div> <div 
+    class="topic-tag">🧠 Psychology</div> <div 
+    class="topic-tag">💼 Career & Business</div> 
+    <div class="topic-tag">🌍 Environment</div> 
+    <div class="topic-tag">🔬 Science & 
+    Tech</div> <div class="topic-tag">🎭 Arts & 
+    Culture</div> <div class="topic-tag">📈 
+    Economics</div>
+  </div> <h2 class="section-title">🏙️ Urban Life & 
+  Cities</h2> <div class="video-grid">
+    <div class="video-card" data-key="urban"> 
+      <h2>Urbanization and the Evolution of 
+      Cities</h2> <div class="iframe-container">
+        <iframe 
+        src="https://embed.ted.com/talks/vance_kite_urbanization_and_the_evolution_of_cities_across_10_000_years" 
+        allowfullscreen sandbox="allow-scripts 
+        allow-same-origin 
+        allow-presentation"></iframe>
+      </div> <p class="desc">Discover how cities 
+      have evolved and explore urban development 
+      vocabulary through this fascinating journey 
+      across 10,000 years of civilization.</p> 
+      <div class="lesson-box">
+        <b>Key Vocabulary:</b> Urban planning, 
+        infrastructure, sustainable development, 
+        metropolitan area, residential zones, 
+        commercial districts.<br> <b>Advanced 
+        Phrases:</b> "The metropolitan area has 
+        undergone rapid urbanization" • 
+        "Sustainable infrastructure is crucial 
+        for modern cities"
+      </div> </div> <div class="video-card" 
+    data-key="smart-cities">
+      </div> </div> </div> <h2 
+  class="section-title">💪 Health & 
+  Lifestyle</h2> <div class="video-grid">
+    <div class="video-card" data-key="game"> 
+      <h2>The Game That Can Give You 10 Extra 
+      Years of Life</h2> <div 
+      class="iframe-container">
+        <iframe 
+        src="https://embed.ted.com/talks/jane_mcgonigal_the_game_that_can_give_you_10_extra_years_of_life" 
+        allowfullscreen sandbox="allow-scripts 
+        allow-same-origin 
+        allow-presentation"></iframe>
+      </div> <p class="desc">Learn how 
+      gamification and positive psychology can 
+      dramatically improve your health and 
+      longevity.</p> <div class="lesson-box">
+        <b>Health Vocabulary:</b> Longevity, 
+        resilience, mindset, physical activity, 
+        motivation, wellness, vitality.<br> 
+        <b>Advanced Usage:</b> "Building 
+        psychological resilience through 
+        gamification techniques enhances overall 
+        well-being."
+      </div> </div> <div class="video-card" 
+    data-key="social">
+      <h2>Why Social Health Is Key to 
+      Happiness</h2> <div 
+      class="iframe-container">
+        <iframe 
+        src="https://embed.ted.com/talks/kasley_killam_why_social_health_is_key_to_happiness_and_longevity" 
+        allowfullscreen sandbox="allow-scripts 
+        allow-same-origin 
+        allow-presentation"></iframe>
+      </div> <p class="desc">Understand the 
+      critical role of social connections in 
+      mental health and discover 
+      relationship-building vocabulary.</p> <div 
+      class="lesson-box">
+        <b>Social Vocabulary:</b> Empathy, 
+        emotional intelligence, support network, 
+        interpersonal skills, community 
+        engagement.<br> <b>Professional 
+        Phrase:</b> "Cultivating strong 
+        interpersonal relationships is 
+        fundamental to emotional well-being and 
+        career success."
+      </div> </div> <div class="video-card" 
+    data-key="mental-health">
+      </div> </div> </div> <h2 
+  class="section-title">🧠 Personal Development & 
+  Psychology</h2> <div class="video-grid">
+    <div class="video-card" data-key="rest"> 
+      <h2>How Rest Can Make You Better at Your 
+      Job</h2> <div class="iframe-container">
+        <iframe 
+        src="https://embed.ted.com/talks/alex_soojung_kim_pang_how_rest_can_make_you_better_at_your_job" 
+        allowfullscreen sandbox="allow-scripts 
+        allow-same-origin 
+        allow-presentation"></iframe>
+      </div> <p class="desc">Learn the science 
+      behind strategic rest and how it can boost 
+      creativity and productivity in professional 
+      settings.</p> <div class="lesson-box">
+        <b>Productivity Vocabulary:</b> Strategic 
+        breaks, cognitive restoration, creative 
+        thinking, work-life balance, burnout 
+        prevention.<br> <b>Business English:</b> 
+        "Implementing strategic rest periods can 
+        significantly enhance team productivity 
+        and innovation."
+      </div> </div> <div class="video-card" 
+    data-key="newjob">
+      <h2>How to Succeed in Your New Job</h2> 
+      <div class="iframe-container">
+        <iframe 
+        src="https://embed.ted.com/talks/gorick_ng_how_to_succeed_in_your_new_job" 
+        allowfullscreen sandbox="allow-scripts 
+        allow-same-origin 
+        allow-presentation"></iframe>
+      </div> <p class="desc">Master workplace 
+      communication, professional networking, and 
+      career advancement strategies.</p> <div 
+      class="lesson-box">
+        <b>Career Vocabulary:</b> Professional 
+        networking, workplace etiquette, 
+        mentorship, adaptability, leadership 
+        skills.<br> <b>Corporate Phrases:</b> 
+        "Demonstrating adaptability and strong 
+        interpersonal skills is crucial for 
+        career advancement."
+      </div> </div> <div class="video-card" 
+    data-key="growth-mindset">
+      <h2>The Power of Believing You Can 
+      Improve</h2> <div class="iframe-container">
+        <iframe 
+        src="https://embed.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve" 
+        allowfullscreen sandbox="allow-scripts 
+        allow-same-origin 
+        allow-presentation"></iframe>
+      </div> <p class="desc">Explore growth 
+      mindset vs. fixed mindset and their impact 
+      on learning and achievement.</p> <div 
+      class="lesson-box">
+        <b>Psychology Terms:</b> Growth mindset, 
+        fixed mindset, neuroplasticity, 
+        perseverance, self-efficacy.<br> 
+        <b>Educational Context:</b> "Fostering a 
+        growth mindset in students significantly 
+        improves their academic performance."
+      </div> </div> </div> <h2 
+  class="section-title">🏥 Health & Medical 
+  Sciences</h2> <div class="video-grid">
+    <div class="video-card" data-key="disease"> 
+      <h2>Why Do Some Bodies Respond Differently 
+      to Disease?</h2> <div 
+      class="iframe-container">
+        <iframe 
+        src="https://embed.ted.com/talks/erika_moore_why_do_some_bodies_respond_differently_to_disease" 
+        allowfullscreen sandbox="allow-scripts 
+        allow-same-origin 
+        allow-presentation"></iframe>
+      </div> <p class="desc">Understand health 
+      disparities, genetics, and immune system 
+      responses through advanced medical 
+      vocabulary.</p> <div class="lesson-box">
+        <b>Medical Vocabulary:</b> Immune system, 
+        genetic predisposition, antibodies, 
+        vaccination, health disparities, 
+        epidemiology.<br> <b>Scientific 
+        Usage:</b> "Genetic predisposition and 
+        environmental factors both influence 
+        immune system responses to pathogens."
+      </div> </div> </div> <h2 
+  class="section-title">🌍 Environment & 
+  Sustainability</h2> <div class="video-grid">
+    <div class="video-card" data-key="climate"> 
+      <h2>Climate Change and What We Can Do</h2> 
+      <div class="iframe-container">
+        <iframe 
+        src="https://embed.ted.com/talks/al_gore_how_to_make_radical_climate_action_the_new_normal" 
+        allowfullscreen sandbox="allow-scripts 
+        allow-same-origin 
+        allow-presentation"></iframe>
+      </div> <p class="desc">Environmental 
+      vocabulary and sustainability concepts for 
+      the modern world.</p> <div 
+      class="lesson-box">
+        <b>Environmental Terms:</b> Carbon 
+        footprint, renewable energy, 
+        sustainability, greenhouse gases, climate 
+        action.<br> <b>Policy Language:</b> 
+        "Implementing comprehensive climate 
+        policies requires coordinated 
+        international cooperation."
+      </div> </div> </div> </div> <script> /* 
+Enhanced Packs with More Comprehensive Content */ 
+const VIDEO_PACKS = {
+  urban: { title: "Advanced Conversation Pack -- 
+    Urban Development & City Planning", level: 
+    "B2-C1", items: [
+      ["Urban sprawl / Gentrification / 
+      Revitalization","گسترش بی‌رویه شهری / نوسازی 
+      محله‌ها / احیای شهری"], ["Infrastructure 
+      development / Public transportation","توسعه 
+      زیرساخت / حمل‌ونقل عمومی"], ["Zoning 
+      regulations / Building permits","مقررات 
+      منطقه‌بندی / مجوز ساخت‌وساز"], ["Affordable 
+      housing / Real estate market","مسکن 
+      مقرون‌به‌صرفه / بازار املاک"], ["Traffic 
+      congestion / Pedestrian-friendly 
+      areas","ترافیک سنگین / مناطق عابرپسند"], 
+      ["Green spaces / Urban planning 
+      committee","فضای سبز / کمیته شهرسازی"]
+    ], mini: [ ["A","What's your opinion on the 
+      new urban development project?"], ["B","I 
+      think it addresses housing shortages, but 
+      we need more green spaces."], ["FA","فکر 
+      می‌کنم کمبود مسکن رو حل می‌کنه، ولی به فضای 
+      سبز بیشتری نیاز داریم."]
+    ]
+  },
+  
+  "smart-cities": { title: "Tech & Innovation 
+    Pack -- Smart Cities", level: "B2-C1", items: 
+    [
+      ["Internet of Things (IoT) / Sensor 
+      networks","اینترنت اشیا / شبکه‌های حسگر"], 
+      ["Artificial intelligence integration / 
+      Machine learning","یکپارچگی هوش مصنوعی / 
+      یادگیری ماشین"], ["Smart grid technology / 
+      Energy efficiency","فناوری شبکه هوشمند / 
+      بهره‌وری انرژی"], ["Data analytics / 
+      Predictive modeling","تجزیه‌وتحلیل داده / 
+      مدل‌سازی پیش‌بینی"], ["Digital infrastructure 
+      / Connectivity solutions","زیرساخت دیجیتال 
+      / راه‌حل‌های اتصال"], ["Automation systems / 
+      Remote monitoring","سیستم‌های خودکار / نظارت 
+      از راه دور"]
+    ], mini: [ ["A","How will IoT sensors improve 
+      traffic management?"], ["B","They'll 
+      provide real-time data to optimize traffic 
+      flow automatically."], ["FA","داده‌های 
+      لحظه‌ای رو فراهم می‌کنن تا ترافیک خودکار 
+      بهینه بشه."]
+    ]
+  },
+  game: { title: "Health & Wellness Pack -- 
+    Longevity & Habits", level: "B1-B2", items: [
+      ["Establish healthy routines / Break bad 
+      habits","عادت‌های سالم بساز / عادت‌های بد رو 
+      بشکن"], ["Physical fitness / Cardiovascular 
+      health","تناسب اندام / سلامت قلبی‌عروقی"], 
+      ["Mental resilience / Stress 
+      management","مقاومت روانی / مدیریت استرس"], 
+      ["Motivation techniques / Goal-setting 
+      strategies","تکنیک‌های انگیزشی / استراتژی‌های 
+      هدف‌گذاری"], ["Lifestyle modification / 
+      Behavioral change","تغییر سبک زندگی / تغییر 
+      رفتار"], ["Wellness tracking / Progress 
+      monitoring","ردیابی سلامت / نظارت بر 
+      پیشرفت"]
+    ], mini: [ ["A","What strategies help you 
+      maintain healthy habits?"], ["B","I set 
+      realistic goals and track my progress 
+      daily."], ["FA","اهداف واقع‌بینانه تعین 
+      می‌کنم و پیشرفتم رو روزانه دنبال می‌کنم."]
+    ]
+  },
+  social: { title: "Social Skills & Emotional 
+    Intelligence Pack", level: "B1-B2", items: [
+      ["Emotional intelligence / Social 
+      awareness","هوش هیجانی / آگاهی اجتماعی"], 
+      ["Interpersonal communication / Active 
+      listening","ارتباط بین‌فردی / گوش دادن 
+      فعال"], ["Conflict resolution / Negotiation 
+      skills","حل تعارض / مهارت‌های مذاکره"], 
+      ["Team collaboration / Leadership 
+      qualities","همکاری تیمی / ویژگی‌های رهبری"], 
+      ["Cultural sensitivity / Diversity 
+      appreciation","حساسیت فرهنگی / قدردانی از 
+      تنوع"], ["Professional networking / 
+      Relationship building","شبکه‌سازی حرفه‌ای / 
+      ایجاد روابط"]
+    ], mini: [ ["A","How do you handle workplace 
+      conflicts effectively?"], ["B","I use 
+      active listening and try to find common 
+      ground."], ["FA","از گوش دادن فعال استفاده 
+      می‌کنم و سعی می‌کنم نقطه مشترک پیدا کنم."]
+    ]
+  },
+  "mental-health": { title: "Mental Health & 
+    Emotional Wellness", level: "A2-B1", items: [
+      ["Emotional first aid / Mental health 
+      awareness","کمک‌های اولیه عاطفی / آگاهی 
+      سلامت روان"], ["Stress management / Anxiety 
+      relief","مدیریت استرس / کاهش اضطراب"], 
+      ["Self-care routines / Mindfulness 
+      practice","روتین‌های خودمراقبتی / تمرین 
+      ذهن‌آگاهی"], ["Support system / Professional 
+      help","سیستم حمایتی / کمک حرفه‌ای"], 
+      ["Emotional regulation / Coping 
+      strategies","تنظیم عاطفی / استراتژی‌های 
+      مقابله"], ["Mental wellness / Psychological 
+      resilience","سلامت روان / مقاومت روانی"]
+    ], mini: [ ["A","I've been feeling 
+      overwhelmed lately. Any suggestions?"], 
+      ["B","Try some mindfulness exercises and 
+      don't hesitate to seek support."], 
+      ["FA","چند تمرین ذهن‌آگاهی امتحان کن و برای 
+      کمک تردید نکن."]
+    ]
+  },
+  rest: { title: "Productivity & Work-Life 
+    Balance Pack", level: "B2", items: [
+      ["Strategic breaks / Cognitive 
+      restoration","استراحت‌های استراتژیک / 
+      بازیابی شناختی"], ["Work-life balance / 
+      Stress reduction","تعادل کار و زندگی / کاهش 
+      استرس"], ["Time management / Priority 
+      setting","مدیریت زمان / تعیین اولویت"], 
+      ["Creative thinking / Innovation 
+      processes","تفکر خلاق / فرآیندهای نوآوری"], 
+      ["Burnout prevention / Mental 
+      health","پیشگیری از فرسودگی / سلامت روان"], 
+      ["Mindfulness practices / Meditation 
+      techniques","تمرین‌های ذهن‌آگاهی / تکنیک‌های 
+      مدیتیشن"]
+    ], mini: [ ["A","How do you prevent burnout 
+      in a demanding job?"], ["B","I schedule 
+      regular breaks and practice mindfulness 
+      techniques."], ["FA","استراحت‌های منظم 
+      برنامه‌ریزی می‌کنم و تکنیک‌های ذهن‌آگاهی تمرین 
+      می‌کنم."]
+    ]
+  },
+  newjob: { title: "Professional Development & 
+    Career Advancement", level: "B2-C1", items: [
+      ["Professional networking / Industry 
+      connections","شبکه‌سازی حرفه‌ای / ارتباطات 
+      صنعتی"], ["Performance evaluation / Career 
+      progression","ارزیابی عملکرد / پیشرفت 
+      شغلی"], ["Skill development / Continuous 
+      learning","توسعه مهارت / یادگیری مستمر"], 
+      ["Workplace etiquette / Corporate 
+      culture","آداب محیط کار / فرهنگ شرکتی"], 
+      ["Project management / Team 
+      leadership","مدیریت پروژه / رهبری تیم"], 
+      ["Salary negotiation / Benefits 
+      package","مذاکره حقوق / بسته مزایا"]
+    ], mini: [ ["A","What's your strategy for 
+      career advancement?"], ["B","I focus on 
+      skill development and building strategic 
+      relationships."], ["FA","روی توسعه مهارت و 
+      ایجاد روابط استراتژیک تمرکز می‌کنم."]
+    ]
+  },
+  "growth-mindset": { title: "Psychology & 
+    Learning Mindset", level: "B2", items: [
+      ["Growth mindset / Fixed mindset","ذهنیت 
+      رشد / ذهنیت ثابت"], ["Neuroplasticity / 
+      Brain development","انعطاف‌پذیری مغز / رشد 
+      مغز"], ["Learning strategies / Study 
+      techniques","استراتژی‌های یادگیری / تکنیک‌های 
+      مطالعه"], ["Perseverance / 
+      Resilience","پشتکار / تاب‌آوری"], 
+      ["Self-efficacy / Confidence 
+      building","خودکارآمدی / ایجاد اعتماد"], 
+      ["Educational psychology / Motivation 
+      theory","روانشناسی تربیتی / نظریه انگیزش"]
+    ], mini: [ ["A","How can I improve my 
+      learning efficiency?"], ["B","Develop a 
+      growth mindset and embrace challenges as 
+      opportunities."], ["FA","ذهنیت رشد پیدا کن 
+      و چالش‌ها رو به عنوان فرصت ببین."]
+    ]
+  },
+  disease: { title: "Medical & Healthcare 
+    Communication", level: "A2-B1", items: [
+      ["Symptoms description / Medical 
+      consultation","توصیف علائم / مشاوره 
+      پزشکی"], ["Treatment options / Medication 
+      management","گزینه‌های درمان / مدیریت 
+      دارو"], ["Health insurance / Medical 
+      expenses","بیمه درمانی / هزینه‌های پزشکی"], 
+      ["Preventive care / Health 
+      screening","مراقبت‌های پیشگیرانه / غربالگری 
+      سلامت"], ["Emergency procedures / First 
+      aid","روندهای اورژانس / کمک‌های اولیه"], 
+      ["Recovery process / 
+      Rehabilitation","فرآیند بهبودی / توان‌بخشی"]
+    ], mini: [ ["A","Could you describe your 
+      symptoms to the doctor?"], ["B","I've been 
+      experiencing fatigue and recurring 
+      headaches."], ["FA","خستگی و سردردهای مکرر 
+      داشتم."]
+    ]
+  },
+  climate: { title: "Environmental & 
+    Sustainability Vocabulary", level: "B2-C1", 
+    items: [
+      ["Climate change / Global warming","تغییرات 
+      آب‌وهوایی / گرمایش جهانی"], ["Carbon 
+      footprint / Renewable energy","ردپای کربن / 
+      انرژی تجدیدپذیر"], ["Sustainability / 
+      Environmental protection","پایداری / محافظت 
+      از محیط زیست"], ["Greenhouse gases / 
+      Emission reduction","گازهای گلخانه‌ای / کاهش 
+      انتشار"], ["Green technology / Clean 
+      energy","فناوری سبز / انرژی پاک"], 
+      ["Conservation / Biodiversity","حفاظت / 
+      تنوع زیستی"]
+    ], mini: [ ["A","What can individuals do 
+      about climate change?"], ["B","We can 
+      reduce our carbon footprint and support 
+      renewable energy."], ["FA","می‌تونیم ردپای 
+      کربنمون رو کم کنیم و از انرژی تجدیدپذیر 
+      حمایت کنیم."]
+    ]
+  }
+};
+// Remove all privacy popups and overlays
+function removePrivacyPopups() { const selectors 
+  = [
+    '.onetrust-pc-dark-filter', 
+    '.onetrust-pc-container', 
+    '#onetrust-consent-sdk', '.ot-sdk-container', 
+    '[id*="onetrust"]', '[class*="onetrust"]', 
+    '[id*="privacy"]', '[class*="privacy"]', 
+    '.cookie-banner', '.consent-banner', 
+    '.gdpr-banner', 'div[style*="position: 
+    absolute"]', 'div[style*="position: fixed"]'
+  ];
+  
+  selectors.forEach(selector => { const elements 
+    = document.querySelectorAll(selector); 
+    elements.forEach(el => {
+      if (el.innerText && ( 
+        el.innerText.includes('privacy') || 
+        el.innerText.includes('Privacy') || 
+        el.innerText.includes('cookie') || 
+        el.innerText.includes('Cookie') || 
+        el.innerText.includes('consent') || 
+        el.innerText.includes('Consent') || 
+        el.innerText.includes('onetrust') || 
+        el.innerText.includes('OneTrust')
+      )) { el.style.display = 'none'; 
+        el.style.visibility = 'hidden'; 
+        el.style.opacity = '0'; 
+        el.style.pointerEvents = 'none'; 
+        el.style.zIndex = '-1'; el.remove();
+      }
+    });
+  });
+}
+// Remove popups every 1 second
+setInterval(removePrivacyPopups, 1000);
+// Initial cleanup
+document.addEventListener('DOMContentLoaded', 
+removePrivacyPopups);
+// Enhanced Packs Renderer
+for(const card of 
+document.querySelectorAll('.video-card')){
+  const key = card.getAttribute('data-key'); 
+  const pack = VIDEO_PACKS[key]; if(!pack) 
+  continue; const details = 
+  document.createElement('details'); 
+  details.className = 'pack'; details.innerHTML = 
+  `
+    <summary>🗣️ ${pack.title} <span 
+    class="badge">${pack.level}</span></summary> 
+    <div class="pack-inner">
+      ${pack.items.map(([en,fa])=>( `<div 
+        class="line"><div 
+        class="en">${en}</div><div 
+        class="fa">${fa}</div></div>`
+      )).join('')} <div class="mini"> <b>🎭 
+        Professional Dialogue Example:</b> <div 
+        class="line"><div class="en">A: 
+        ${pack.mini[0][1]}</div></div> <div 
+        class="line"><div class="en">B: 
+        ${pack.mini[1][1]}</div><div 
+        class="fa">${pack.mini[2][1]}</div></div>
+      </div> </div> `; card.appendChild(details);
+}
+// Smooth scrolling for topic tags
+document.querySelectorAll('.topic-tag').forEach(tag 
+=> {
+  tag.addEventListener('click', function() { 
+    const topics = 
+    document.querySelectorAll('.section-title'); 
+    const randomTopic = 
+    topics[Math.floor(Math.random() * 
+    topics.length)]; randomTopic.scrollIntoView({ 
+    behavior: 'smooth' });
+  });
+});
+// Iframe loading animation
+document.querySelectorAll('iframe').forEach(iframe 
+=> {
+  iframe.addEventListener('load', function() { 
+    this.style.opacity = '1'; 
+    removePrivacyPopups(); // Remove popups after 
+    iframe loads
+  });
+  iframe.style.opacity = '0.7';
+});
+// CSS injection to hide popups
+const style = document.createElement('style'); 
+style.textContent = `
+  .onetrust-pc-dark-filter, 
+  .onetrust-pc-container,
+  #onetrust-consent-sdk,
+  .ot-sdk-container, [id*="onetrust"], 
+  [class*="onetrust"], [id*="privacy"], 
+  [class*="privacy"], .cookie-banner, 
+  .consent-banner, .gdpr-banner {
+    display: none !important; visibility: hidden 
+    !important;
+    opacity: 0 !important; pointer-events: none 
+    !important;
+    z-index: -9999 !important;
+  }
+`; document.head.appendChild(style); </script> 
+</body>
+</html>

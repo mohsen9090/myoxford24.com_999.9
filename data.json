@@ -1,0 +1,82 @@
+{
+  "categories": [
+    {
+      "emoji": "🏙️",
+      "title": "Urban Life & Cities",
+      "videos": [
+        {
+          "title": "Urbanization and the Evolution of Cities",
+          "ted": "vance_kite_urbanization_and_the_evolution_of_cities_across_10_000_years",
+          "desc": "Urban development & city planning vocabulary.",
+          "thumb": "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/c5d2e8f1-9a4b-4c7e-81f2-3d6b9e5f8c2a/VanceKite_2023X-embed.jpg?w=1200",
+          "duration": "13:15",
+          "vocab": ["Urban life","Infrastructure","Sustainable","Metropolitan","Residential area"],
+          "example": "The metropolitan area has expanded rapidly in the last decade."
+        }
+      ]
+    },
+    {
+      "emoji": "💪",
+      "title": "Health & Lifestyle",
+      "videos": [
+        {
+          "title": "The Game That Can Give You 10 Extra Years of Life",
+          "ted": "jane_mcgonigal_the_game_that_can_give_you_10_extra_years_of_life",
+          "desc": "Health improvement and longevity strategies.",
+          "thumb": "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/2f8b1c5e-3e7f-4a9b-85d2-6c9e4f7b8a1c/JaneMcGonigal_2012G-embed.jpg?w=1200",
+          "duration": "19:27",
+          "vocab": ["Longevity","Resilience","Mindset","Physical activity","Motivation"],
+          "example": "A positive mindset can increase your resilience."
+        },
+        {
+          "title": "Why Social Health Is Key to Happiness",
+          "ted": "kasley_killam_why_social_health_is_key_to_happiness_and_longevity",
+          "desc": "Social relationships and mental health vocabulary.",
+          "thumb": "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/8e3f2c9b-6a5d-4f8e-91b7-2c5e7f9a4d8b/KasleyKillam_2023S-embed.jpg?w=1200",
+          "duration": "12:18",
+          "vocab": ["Empathy","Connection","Support network","Emotional well-being"],
+          "example": "Building a strong support network improves emotional well-being."
+        }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "title": "Personal Development",
+      "videos": [
+        {
+          "title": "How Rest Can Make You Better at Your Job",
+          "ted": "alex_soojung_kim_pang_how_rest_can_make_you_better_at_your_job",
+          "desc": "The science of strategic rest and performance improvement.",
+          "thumb": "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/7b0d97a3-48b2-4720-b686-ed46529b5e01/AlexSoojungKimPang_2019S-embed.jpg?w=1200",
+          "duration": "14:23",
+          "vocab": ["Productivity","Creativity","Strategic breaks","Burnout"],
+          "example": "Taking regular breaks can boost your creativity."
+        },
+        {
+          "title": "How to Succeed in Your New Job",
+          "ted": "gorick_ng_how_to_succeed_in_your_new_job",
+          "desc": "Career success and workplace communication strategies.",
+          "thumb": "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/a25b1b5e-74d5-497c-b6b4-7e4e5a0fa5b9/GorickNg_2023S-embed.jpg?w=1200",
+          "duration": "12:45",
+          "vocab": ["Networking","Professionalism","Adaptability","Mentor"],
+          "example": "Adaptability is essential for success in a new job."
+        }
+      ]
+    },
+    {
+      "emoji": "🏥",
+      "title": "Health & Medical",
+      "videos": [
+        {
+          "title": "Why Do Some Bodies Respond Differently to Disease?",
+          "ted": "erika_moore_why_do_some_bodies_respond_differently_to_disease",
+          "desc": "Understanding health disparities and medical vocabulary.",
+          "thumb": "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/7a4f3b5e-b4a5-4d12-8e7f-1c5f3e8b9c0d/ErikaMoore_2023S-embed.jpg?w=1200",
+          "duration": "08:12",
+          "vocab": ["Immunity","Genetic factors","Prevention","Antibodies"],
+          "example": "Antibodies play a key role in immunity."
+        }
+      ]
+    }
+  ]
+}

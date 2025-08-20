@@ -1,0 +1,196 @@
+{
+  "packs": [
+    {
+      "id": "personal-intro",
+      "icon": "👤",
+      "title": "Personal Info & Introductions",
+      "level": "A2-B1",
+      "items": [
+        {"en":"I am interested in + V-ing","fa":"من به ... علاقمندم"},
+        {"en":"I am keen on + V-ing","fa":"من خیلی مشتاقِ ... هستم"},
+        {"en":"I am passionate about + V-ing","fa":"من عاشقِ ... هستم"},
+        {"en":"I enjoy + V-ing","fa":"از ... لذت می‌برم"},
+        {"en":"I prefer + V-ing / to + verb","fa":"ترجیح می‌دهم ..."},
+        {"en":"I would rather + verb","fa":"ترجیح می‌دهم که ..."},
+        {"en":"Forename / First name","fa":"نام"},
+        {"en":"Surname / Family name","fa":"نام خانوادگی"},
+        {"en":"What is your occupation?","fa":"شغل شما چیست؟"}
+      ],
+      "dialogue":[
+        {"en":"A: What are your interests?","fa":"الف: علایقت چیه؟"},
+        {"en":"B: I'm keen on traveling and I enjoy reading novels.","fa":"ب: عاشق سفرم و از خواندن رمان لذت می‌برم."}
+      ]
+    },
+
+    {
+      "id": "skills",
+      "icon": "🧩",
+      "title": "Skills & Abilities",
+      "level": "A2-B1",
+      "items": [
+        {"en":"I am skillful at + V-ing","fa":"من در ... ماهرم"},
+        {"en":"I am good at + V-ing","fa":"من در ... خوبم"},
+        {"en":"I am capable of + V-ing","fa":"من قادر به ... هستم"},
+        {"en":"I am talented in + V-ing","fa":"من در ... بااستعدادم"},
+        {"en":"I have expertise in + V-ing","fa":"من تخصص در ... دارم"},
+        {"en":"I am able to + verb / I can + verb","fa":"من می‌توانم ..."}
+      ],
+      "drills": [
+        {"prompt_en":"What are you good at? Answer with 'I am good at ...'", "sample_en":"I am good at solving problems.", "fa":"در مورد مهارتت با «I am good at ...» جواب بده."}
+      ]
+    },
+
+    {
+      "id": "polite-requests",
+      "icon": "🙏",
+      "title": "Polite Requests",
+      "level": "A2",
+      "items":[
+        {"en":"Could you please explain again?","fa":"ممکنه دوباره توضیح بدید؟"},
+        {"en":"Would you mind explaining this grammar?","fa":"امکانش هست این گرامر رو توضیح بدید؟"},
+        {"en":"Is it possible to call me later?","fa":"امکانش هست بعداً با من تماس بگیرید؟"}
+      ]
+    },
+
+    {
+      "id": "personality",
+      "icon": "🎭",
+      "title": "Personality & Character",
+      "level": "A2-B1",
+      "items":[
+        {"en":"Kind / Unkind","fa":"مهربان / نامهربان"},
+        {"en":"Responsible / Irresponsible","fa":"مسئولیت‌پذیر / بی‌مسئولیت"},
+        {"en":"Generous / Stingy","fa":"دست‌ودل‌باز / خسیس"},
+        {"en":"Sociable / Shy / Talkative","fa":"اجتماعی / خجالتی / پرحرف"},
+        {"en":"Honest / Dishonest / Frank","fa":"صادق / غیرصادق / رک"},
+        {"en":"Optimistic / Pessimistic","fa":"خوش‌بین / بدبین"},
+        {"en":"Loyal / Disloyal","fa":"وفادار / بی‌وفا"},
+        {"en":"Hardworking / Diligent","fa":"سخت‌کوش / باپشتکار"},
+        {"en":"Creative / Ambitious","fa":"خلاق / جاه‌طلب"}
+      ],
+      "dialogue":[
+        {"en":"A: What is Ali like?","fa":"الف: علی چه‌جور آدمیه؟"},
+        {"en":"B: He's honest and hardworking, but a bit strict.","fa":"ب: صادق و سخت‌کوشه، ولی کمی سخت‌گیره."}
+      ]
+    },
+
+    {
+      "id": "health-symptoms",
+      "icon": "🤒",
+      "title": "Health: Symptoms",
+      "level": "A2",
+      "items":[
+        {"en":"I have a headache / sore throat / runny nose.","fa":"من سردرد / گلودرد / آبریزش بینی دارم."},
+        {"en":"I have a fever and chills.","fa":"تب و لرز دارم."},
+        {"en":"I feel dizzy / I have vertigo.","fa":"سرگیجه دارم."},
+        {"en":"I have vomiting / nausea.","fa":"حالت تهوع دارم."},
+        {"en":"My nose is blocked.","fa":"بینیم گرفته است."},
+        {"en":"I have a pain in my hand/leg/kidney.","fa":"درد در دست/پا/کلیه دارم."}
+      ],
+      "drills":[
+        {"prompt_en":"Doctor asks: What are your symptoms? Answer with two.", "sample_en":"I have a sore throat and a fever.", "fa":"پزشک می‌پرسه علائمت چیه؟ با دو مورد جواب بده."}
+      ]
+    },
+
+    {
+      "id": "health-treatment",
+      "icon": "🏥",
+      "title": "Health: Advice & Treatment",
+      "level": "A2",
+      "items":[
+        {"en":"You should visit a doctor.","fa":"باید به پزشک مراجعه کنید."},
+        {"en":"Take your tablets on time.","fa":"قرص‌ها را سر وقت مصرف کن."},
+        {"en":"Make an appointment.","fa":"وقت بگیر."},
+        {"en":"Prescription / Surgery / Specialist","fa":"نسخه / جراحی / متخصص"},
+        {"en":"Painkiller / Antibiotics / Vitamins / Ointment / Cough syrup","fa":"مسکن / آنتی‌بیوتیک / ویتامین‌ها / پماد / شربت سرفه"}
+      ]
+    },
+
+    {
+      "id": "urbanization",
+      "icon": "🏙️",
+      "title": "Urbanization & City Life",
+      "level": "B1",
+      "items":[
+        {"en":"Urban life / Country life","fa":"زندگی شهری / زندگی روستایی"},
+        {"en":"Facilities / Amenities","fa":"امکانات"},
+        {"en":"Crowded / Polluted / Overpopulated","fa":"شلوغ / آلوده / بیش‌ازحد پرجمعیت"},
+        {"en":"Metropolitan / Residential complex / Commercial complex","fa":"کلان‌شهری / مجتمع مسکونی / مجتمع تجاری"},
+        {"en":"Architecture / Sightseeings / Local bazaar","fa":"معماری / جاهای دیدنی / بازار محلی"},
+        {"en":"High costs of living","fa":"هزینه‌های بالای زندگی"}
+      ]
+    },
+
+    {
+      "id": "crime-law",
+      "icon": "⚖️",
+      "title": "Crime & Law",
+      "level": "B1",
+      "items":[
+        {"en":"Robbery / Burglar / Shoplifting / Pickpocketing","fa":"سرقت از بانک / سارق خانه / دزدی از مغازه / جیب‌بری"},
+        {"en":"Fraud / Forgery / Embezzlement","fa":"کلاهبرداری / جعل / اختلاس"},
+        {"en":"Arson / Vandalism / Mugging / Smuggling","fa":"حریق عمدی / تخریب اموال / خفت‌گیری / قاچاق"},
+        {"en":"Punish / Fine / Investigate / Accuse","fa":"مجازات / جریمه / بررسی / متهم کردن"},
+        {"en":"It is forbidden / against the law.","fa":"قدغن است / خلاف قانون است."}
+      ]
+    },
+
+    {
+      "id": "work-career",
+      "icon": "💼",
+      "title": "Work & Career",
+      "level": "B1",
+      "items":[
+        {"en":"I was promoted / I resigned.","fa":"ارتقا گرفتم / استعفا دادم."},
+        {"en":"Out of work / Jobseeker","fa":"بیکار / جویای کار"},
+        {"en":"Hired / Fired / Dismissed / Made redundant","fa":"استخدام شد / اخراج شد / تعدیل شد"},
+        {"en":"Excellent prospects / Reward / Challenging","fa":"آینده شغلی عالی / پاداش / چالش‌برانگیز"},
+        {"en":"Officially / Over the phone / In person / In writing","fa":"رسماً / تلفنی / حضوری / کتبی"}
+      ],
+      "dialogue":[
+        {"en":"A: How did the interview go?","fa":"الف: مصاحبه چطور پیش رفت؟"},
+        {"en":"B: Things went well. I was hired!","fa":"ب: خوب پیش رفت. استخدام شدم!"}
+      ]
+    },
+
+    {
+      "id": "color-idioms",
+      "icon": "🎨",
+      "title": "Color Idioms",
+      "level": "B1",
+      "items":[
+        {"en":"feel blue","fa":"افسرده بودن"},
+        {"en":"once in a blue moon","fa":"به ندرت"},
+        {"en":"out of the blue","fa":"یهویی / ناگهانی"},
+        {"en":"green with envy / give the green light","fa":"از حسادت سبز شدن / چراغ سبز دادن"},
+        {"en":"in the red / in the black","fa":"بدهکار / سودده"},
+        {"en":"see red","fa":"از کوره در رفتن"},
+        {"en":"white lie / raise a white flag","fa":"دروغ مصلحتی / تسلیم شدن"}
+      ]
+    },
+
+    {
+      "id": "phrasal-verbs",
+      "icon": "🔄",
+      "title": "Phrasal Verbs",
+      "level": "B1",
+      "items":[
+        {"en":"give up / get over / run out of","fa":"ول کردن / بهبود یافتن / تمام کردنِ چیزی"},
+        {"en":"take after / get used to / get on with","fa":"به کسی رفتن / عادت کردن / کنار آمدن"},
+        {"en":"give away / make up (a story) / put out (fire)","fa":"بخشیدن / داستان سرهم کردن / خاموش کردن"}
+      ]
+    },
+
+    {
+      "id": "phone-tech",
+      "icon": "📱",
+      "title": "Phone & Everyday Tech",
+      "level": "A2",
+      "items":[
+        {"en":"Who’s speaking? / You’re breaking up.","fa":"کی پشت خطه؟ / صدات قطع و وصل میشه."},
+        {"en":"Hold on a moment. / Can you put Ali on?","fa":"یک لحظه صبر کن. / میشه گوشی رو بدی به علی؟"},
+        {"en":"Plug it in / Unplug it.","fa":"بزن به برق / از برق بکش."}
+      ]
+    }
+  ]
+}

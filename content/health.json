@@ -1,0 +1,12 @@
+{"items":[
+  {"cat":"💪 Health & Lifestyle","icon":"💪","title":"The Game That Can Give You 10 Extra Years of Life",
+   "ted":"jane_mcgonigal_the_game_that_can_give_you_10_extra_years_of_life",
+   "desc":"Health improvement and longevity strategies.",
+   "vocab":["Longevity","Resilience","Mindset","Physical activity","Motivation"],
+   "example":"A positive mindset can increase your resilience."},
+  {"cat":"💪 Health & Lifestyle","icon":"💪","title":"Why Do Some Bodies Respond Differently to Disease?",
+   "ted":"erika_moore_why_do_some_bodies_respond_differently_to_disease",
+   "desc":"Understanding health disparities and medical vocabulary.",
+   "vocab":["Immunity","Genetic factors","Prevention","Antibodies","Fever"],
+   "example":"Antibodies play a key role in immunity."}
+]}

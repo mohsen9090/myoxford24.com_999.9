@@ -1,0 +1,12 @@
+{"items":[
+  {"cat":"📝 Grammar Essentials","icon":"📝","title":"Tenses in real life",
+   "ted":"alex_soojung_kim_pang_how_rest_can_make_you_better_at_your_job",
+   "desc":"Present, Past, Progressive with daily questions.",
+   "vocab":["present simple","past simple","past progressive","present perfect"],
+   "example":"I was speaking with my mom at 3 pm yesterday."},
+  {"cat":"📝 Grammar Essentials","icon":"📝","title":"Polite Requests",
+   "ted":"alex_soojung_kim_pang_how_rest_can_make_you_better_at_your_job",
+   "desc":"Could you please… / Would you mind … / Is it possible to …",
+   "vocab":["Could you…","Would you…","Do you mind…","Is it possible…"],
+   "example":"Would you mind explaining this grammar again?"}
+]}

@@ -1,0 +1,9 @@
+{
+  "name":"MyOxford24 — TED Learning Hub",
+  "short_name":"MyOxford24",
+  "start_url":"/",
+  "display":"standalone",
+  "theme_color":"#0f1021",
+  "background_color":"#0f1021",
+  "icons":[]
+}
